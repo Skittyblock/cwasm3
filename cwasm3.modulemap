@@ -10,7 +10,6 @@ framework module CWasm3 [system] {
     header "m3_config.h"
     header "m3_config_platforms.h"
     header "m3_core.h"
-    header "m3_emit.h"
     header "m3_env.h"
     header "m3_exception.h"
     header "m3_exec.h"
