@@ -58,7 +58,8 @@ typedef struct M3Global
 
     union
     {
-        i64 intValue;
+        i32 i32Value;
+        i64 i64Value;
 #if d_m3HasFloat
         f64 f64Value;
         f32 f32Value;
@@ -91,6 +92,7 @@ typedef struct M3Module
 
     u32                     numFuncImports;
     u32                     numFunctions;
+    u32                     allFunctions;           // allocated functions count
     M3Function *            functions;
 
     i32                     startFunction;
@@ -120,6 +122,7 @@ M3Module;
 
 M3Result                    Module_AddGlobal            (IM3Module io_module, IM3Global * o_global, u8 i_type, bool i_mutable, bool i_isImported);
 
+M3Result                    Module_PreallocFunctions    (IM3Module io_module, u32 i_totalFunctions);
 M3Result                    Module_AddFunction          (IM3Module io_module, u32 i_typeIndex, IM3ImportInfo i_importInfo /* can be null */);
 IM3Function                 Module_GetFunction          (IM3Module i_module, u32 i_functionIndex);
 
@@ -138,6 +141,8 @@ typedef struct M3Environment
     IM3FuncType             retFuncTypes [c_m3Type_unknown];    // these 'point' to elements in the linked list above.
                                                                 // the number of elements must match the basic types as per M3ValueType
     M3CodePage *            pagesReleased;
+
+    M3SectionHandler        customSectionHandler;
 }
 M3Environment;
 
@@ -184,6 +189,8 @@ typedef struct M3Runtime
 #if d_m3RecordBacktraces
     M3BacktraceInfo         backtrace;
 #endif
+
+	u32						newCodePageSequence;
 }
 M3Runtime;
 
