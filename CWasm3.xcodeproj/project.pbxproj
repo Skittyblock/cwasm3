@@ -297,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 575C640E288DB817004FD7DC /* cwasm3.xcconfig */;
 			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -304,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 575C640E288DB817004FD7DC /* cwasm3.xcconfig */;
 			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Release;
 		};
@@ -311,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 575C640E288DB817004FD7DC /* cwasm3.xcconfig */;
 			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -318,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 575C640E288DB817004FD7DC /* cwasm3.xcconfig */;
 			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Release;
 		};

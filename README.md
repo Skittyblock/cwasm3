@@ -2,8 +2,6 @@
 
 `CWasm3` packages the [`Wasm3 library`](https://github.com/wasm3/wasm3) inside of a Swift package. The original `Wasm3` header and implementation files are unchanged, but `CWasm3` does add some additional conveniences to allow for receiving the return values from WebAssembly functions instead of having them printed to the console.
 
-`CWasm3`'s releases mirror those of `Wasm3` to make it easier to integrate with other projects.
-
 ## Installation
 
 ### Swift Package Manager
@@ -13,7 +11,7 @@ To use `CWasm3` with the Swift Package Manager, add a dependency to your Package
 ```swift
 let package = Package(
   dependencies: [
-    .package(name: "CWasm3", url: "https://github.com/shareup/cwasm3.git", .upToNextMinor(from: "0.5.0"))
+    .package(name: "CWasm3", url: "https://github.com/Skittyblock/cwasm3.git", .upToNextMinor(from: "0.5.0"))
   ]
 )
 ```

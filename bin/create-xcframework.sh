@@ -33,7 +33,6 @@ function createXCFramework() {
   xcodebuild \
     -create-xcframework \
     -framework ".archives/CWasm3-iOS.xcarchive/Products/Library/Frameworks/CWasm3.framework" \
-    -debug-symbols "$1/.archives/CWasm3-iOS.xcarchive/BCSymbolMaps/9EDFC8DD-15A8-39FB-B396-190B0F458495.bcsymbolmap" \
     -debug-symbols "$1/.archives/CWasm3-iOS.xcarchive/dSYMs/CWasm3.framework.dSYM" \
     -framework ".archives/CWasm3-iOS-Simulator.xcarchive/Products/Library/Frameworks/CWasm3.framework" \
     -debug-symbols "$1/.archives/CWasm3-iOS-Simulator.xcarchive/dSYMs/CWasm3.framework.dSYM" \

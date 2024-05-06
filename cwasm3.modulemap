@@ -21,6 +21,7 @@ framework module CWasm3 [system] {
     header "wasm3_additions.h"
     header "wasm3_defs.h"
     header "wasm3_ext.h"
+    header "yield.h"
 
     export *
 }
